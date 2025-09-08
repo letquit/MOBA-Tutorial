@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: PT_Generic_Tree_Leaves_mat
   m_Shader: {fileID: 4800000, guid: 77e1a76a38ecd5a46a270afb12894dd5, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _CUSTOMWIND1_ON
   - _TRANSLUCENCYONOFF_ON
@@ -21,6 +23,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -80,7 +83,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _Gradient: 0.167
+    - _Gradient: 0.326
     - _GradientPower: 2.54
     - _LeavesThickness: 0.445
     - _MaskClipValue: 0.5
@@ -98,11 +101,11 @@ Material:
     - _SrcBlend: 1
     - _TRANSLUCENCYONOFF: 1
     - _TransAmbient: 0.7
-    - _TransDirect: 0.58
-    - _TransNormalDistortion: 0.486
-    - _TransScattering: 25.1
-    - _TransShadow: 0.5
-    - _Translucency: 5
+    - _TransDirect: 0.655
+    - _TransNormalDistortion: 0.762
+    - _TransScattering: 32.2
+    - _TransShadow: 0
+    - _Translucency: 36
     - _UVSec: 0
     - _WINDMASKONOFF: 0
     - _WindDensity: 0.5
@@ -119,3 +122,4 @@ Material:
     - _GroundColor: {r: 1, g: 0, b: 0, a: 1}
     - _TopColor: {r: 1, g: 0.6415998, b: 0, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

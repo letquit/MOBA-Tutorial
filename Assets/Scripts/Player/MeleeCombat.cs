@@ -2,6 +2,10 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// 近战战斗系统组件，用于控制角色的近战攻击行为。
+/// 该类依赖于 Movement 和 Stats 组件。
+/// </summary>
 [RequireComponent(typeof(Movement)), RequireComponent(typeof(Stats))]
 public class MeleeCombat : MonoBehaviour
 {
@@ -17,6 +21,9 @@ public class MeleeCombat : MonoBehaviour
     private float attackInterval;
     private float nextAttackTime = 0;
 
+    /// <summary>
+    /// 初始化组件引用。
+    /// </summary>
     private void Start()
     {
         moveScript = GetComponent<Movement>();
@@ -24,6 +31,9 @@ public class MeleeCombat : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// 每帧更新逻辑，计算攻击间隔并判断是否执行攻击。
+    /// </summary>
     private void Update()
     {
         // 计算每次攻击的速度和间隔时间
@@ -41,6 +51,10 @@ public class MeleeCombat : MonoBehaviour
         }
     }
     
+    /// <summary>
+    /// 控制攻击动画播放与冷却时间的协程。
+    /// </summary>
+    /// <returns>IEnumerator 用于协程控制</returns>
     private IEnumerator MeleeAttackInterval()
     {
         performMeleeAttack = false;
@@ -60,7 +74,9 @@ public class MeleeCombat : MonoBehaviour
         }
     }
     
-    // 在动画事件中调用
+    /// <summary>
+    /// 执行实际的攻击逻辑，在动画事件中被调用。
+    /// </summary>
     private void MeleeAttack()
     {
         stats.TakeDamage(targetEnemy, stats.damage);
